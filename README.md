@@ -1,10 +1,11 @@
 # Metrics, Ratios, Analysis, R2 Scores and others
-# Please Read the Documentation.PDF
+# Read the Documentation.PDF
+_much more details and at lenght descriptions of how to use and manipulate the files_
 
 
 _(First of all, my deepest apologies for the naming conventions and the folder structure and hierarchy mess)_
 
-
+_(Secondly, all stock data could not be uploaded due to github limits on file size. running the code should get them; although the results as csv's are already included for convenience)_
 
 ### I. Outline:
 ##### This project automatically takes all the stocks on the s&p500 index as of August, 2024 and does various sorts of analysis on them. These are given as output in the form of csv’s and can also be accessed through flask. The details on all the files are listed below.
@@ -83,9 +84,9 @@ Ratios were computed based on balance sheets, financials, and cash flow statemen
 
     The SIMPLE_FLASK_API.py script provides a simple Flask API with the to compare various ticks and numerous metrics and analyses. It is straightforward presentation in tables.
     
-![Flask1]([https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/I-Zaifa/SP500AnalyzedtoX/blob/main/Flask1.jpg))
+![Flask1](https://github.com/I-Zaifa/SP500AnalyzedtoX/blob/main/Flask1.jpg))
 
-!Flask2]([https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/I-Zaifa/SP500AnalyzedtoX/blob/main/Flask2.jpg))    
+![Flask2](https://github.com/I-Zaifa/SP500AnalyzedtoX/blob/main/Flask2.jpg)    
 
 ### IV. All Files Included
 ##### Main Files to Run:
@@ -94,3 +95,10 @@ Ratios were computed based on balance sheets, financials, and cash flow statemen
     TICKER_LOOKER.py: For specific ticker lookups.
     SIMPLE_FLASK_API.py: Provides the Flask API.
     Fred_api_key_file.txt: For FredAPI key input.
+
+### V. Future Plans
+
+    Larger Dataset: Plan to include more companies and improve data presentation in the Flask API, including visualizations.
+    Scalability: Aim to perfect the current smaller-scale model before scaling to larger datasets.
+
+_Valete_

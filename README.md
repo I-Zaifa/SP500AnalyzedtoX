@@ -1,5 +1,7 @@
 # Metrics, Ratios, Analysis, R2 Scores and others
-# Read the Documentation.PDF
+## Read the Documentation.PDF
+https://github.com/I-Zaifa/SP500AnalyzedtoX/blob/main/Documentation.pdf
+
 _much more details and at lenght descriptions of how to use and manipulate the files_
 
 _(All stock data could not be uploaded due to github limits on file size. running the code should get them; although the results as csv's are already included for convenience)_
@@ -10,13 +12,7 @@ _(All stock data could not be uploaded due to github limits on file size. runnin
 
 ### II. Dependencies Used
 
-    Pandas
-    Flask
-    yFinance
-    FredAPI
-    NumPy
-    Glob
-    Scikit-Learn
+    Pandas, Flask, yFinance, FredAPI, NumPy, Glob, Scikit-Learn
 
 ### III. Main Methodology & Process
 
@@ -26,15 +22,7 @@ A list of 500 tickers corresponding to the S&P 500 is provided to the yFinance l
 
 The data spans from January 2013 to January 2023 (Daily Data) and includes:
 
-Opening Prices
-
-Closing Prices
-
-Volume
-
-Dividends (quarterly or yearly)
-
-Stock Splits
+Opening Prices, Closing Prices, Volume, Dividends (quarterly or yearly), Stock Splits
 
 Financial statements (balance sheet, financials, cash flow) were also collected (Yearly Data of 5 years) and saved as CSV files.
 
@@ -42,43 +30,46 @@ Macroeconomic data was downloaded using the FredAPI, covering indicators such as
 
 ###### 2. Stock Metrics Analysis
 
-    Average Stock Price over the past ten years
-    Yearly Stock Trend (number of years with increase vs decrease)
-    Average Returns (mean)
-    Standard Deviation (average deviation from the mean)
-    Covariance (Stock, Market) using 'IRX' ticker (US Treasury Bills) as a market proxy
-    Variance of each stock
-    Beta Calculation (Covariance / Variance) to assess stock performance relative to the market
-    R2 Score using a Random Forest Regressor (RFR) based on 10-year averages with macroeconomic indicators as independent variables.
+Average Stock Price over the past ten years
+
+Yearly Stock Trend (number of years with increase vs decrease)
+
+Average Returns (mean)
+
+Standard Deviation (average deviation from the mean)
+
+Covariance (Stock, Market) using 'IRX' ticker (US Treasury Bills) as a market proxy
+
+Variance of each stock
+
+Beta Calculation (Covariance / Variance) to assess stock performance relative to the market
+
+R2 Score using a Random Forest Regressor (RFR) based on 10-year averages with macroeconomic indicators as independent variables.
+
 
 ###### 3. Dividend Analysis
 
-    Dividends per Year
-    Latest Dividend Paid ($) per Share
-    Years Without Dividends (non-cumulative, over 10 years)
-    Trend in Dividend Payments (increasing or decreasing)
-    Average Dividend Payment
-    Dividend Yield (average dividend per year / average stock price)
-    Price to Earnings Ratio
-    Free Cash (in millions $) to assess the company's ability to cover dividends.
+Dividends per Year
+
+Latest Dividend Paid ($) per Share
+
+Years Without Dividends (non-cumulative, over 10 years)
+
+Trend in Dividend Payments (increasing or decreasing)
+
+Average Dividend Payment
+
+Dividend Yield (average dividend per year / average stock price)
+
+Price to Earnings Ratio
+
+Free Cash (in millions $) to assess the company's ability to cover dividends.
 
 ###### 4. Ratio Analysis
 
 Ratios were computed based on balance sheets, financials, and cash flow statements, including:
 
-    Current Assets
-    Quick Ratio
-    Debt to Equity Ratio
-    Total Debt to Total Capitalization Ratio
-    Debt to Assets Ratio
-    Net Debt to Equity Ratio
-    Return on Equity
-    Return on Assets
-    Return on Investment
-    Gross Profit Margin
-    Asset Turnover
-    Inventory Turnover
-    Receivables Turnover
+Current Assets, Quick Ratio, Debt to Equity Ratio, Total Debt to Total Capitalization Ratio, Debt to Assets Ratio, Net Debt to Equity Ratio, Return on Equity, Return on Assets, Return on Investment, Gross Profit Margin, Asset Turnover, Inventory Turnover, Receivables Turnover
 
 ###### 5. Averages & Risk Analysis
 
@@ -89,8 +80,6 @@ Risk Analysis was performed on all ratios, with R2 Scores calculated for each ra
 ###### 6. Flask API
 
 The SIMPLE_FLASK_API.py script provides a simple Flask API with the to compare various ticks and numerous metrics and analyses. It is straightforward presentation in tables.
-    
-![Flask1](https://github.com/I-Zaifa/SP500AnalyzedtoX/blob/main/Flask1.jpg))
 
 ![Flask2](https://github.com/I-Zaifa/SP500AnalyzedtoX/blob/main/Flask2.jpg)    
 

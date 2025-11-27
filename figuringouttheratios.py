@@ -1,6 +1,5 @@
 import pandas as pd
 import glob
-import os
 
 def get_ratios_from_bs():
 
@@ -117,8 +116,8 @@ def get_ratios_from_bs():
         try:
             file_bs = bs
             file_fn = fn
-            filename = os.path.basename(file_bs)
-            ticker_name = filename.split('_')[0]
+            ticker_name = file_bs.split('_')[0]
+            ticker_name = ticker_name.split('\\')[1]
             print(ticker_name)
             get_the_bs_data(file_bs, file_fn, ticker_name=ticker_name)    
 

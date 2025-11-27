@@ -46,8 +46,8 @@ def read_and_format_file(file_path):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        raw = request.form.get('tickers') or ''
-        tickers = [t.strip() for t in raw.split(',') if t.strip()]
+        tickers = request.form.get('tickers').split(',')
+        tickers = [ticker.strip() for ticker in tickers]  # Remove any extra spaces
         
         # File paths for search
         search_file_paths = [

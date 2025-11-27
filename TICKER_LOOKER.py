@@ -30,7 +30,7 @@ def search_tickers_in_files(file_paths, tickers, output_file):
 file_paths = [
     'All_Ratios/ratioAverages/average.csv',
     'All_Ratios/Risk_analysison_Ratios/analyzed_metrics_individual_r2.csv',
-    'All_stock/dividends_etc/dividends_analysis.csv',
+    'All_Stock/dividends_etc/dividends_analysis.csv',
     'All_Stock/stock_metrics/stocks_analyzed.csv',
     'All_Ratios/ratiotrendyAverages/trendyaverage.csv'
 ]

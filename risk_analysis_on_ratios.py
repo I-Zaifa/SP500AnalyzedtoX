@@ -36,7 +36,7 @@ def getting_R2_for_ratios():
             feature_importances = model.feature_importances_
             feature_importances = np.round(feature_importances, 5)
 
-            results[ratio] = r2_score
+            results[ratio] = {r2_score}
 
             # This sums up the features weights for all categories. ()
             feature_importance_sum += feature_importances
@@ -53,7 +53,7 @@ def getting_R2_for_ratios():
         final_dataframe.insert(0, 'Ticker', SYMBL)
 
         # This is basically the sum of the R2 score
-        final_metric = pd.DataFrame([{'Ticker': SYMBL, "R2_Sum": r2_score_avg, **indicator_dict}])
+        final_metric = pd.DataFrame([{'Ticker': [SYMBL], "R2_Sum": r2_score_avg, **indicator_dict}])
         return final_dataframe, final_metric
 
         
